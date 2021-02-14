@@ -1,0 +1,254 @@
+/////////////////////////SVG ANIMATIONS//////////////
+//////////////////////////SVG ANIMATIONS//////////////
+///////////////////////////SVG ANIMATIONS//////////////
+
+/* ANIMATION STEPS */
+
+/* STEPS */
+
+#right-foot {
+  animation: moveStairs 6s ease;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#left-foot {
+  animation: moveStairs 6s ease;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#upperbody {
+  animation: moveStairs 6s ease;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+/* BUSY */
+
+#right-thunder {
+  animation: thunderRight 2s linear 0.7s;
+  animation-iteration-count: infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#left-thunder {
+  animation: thunderLeft 2s linear;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#sheet1 {
+  animation: sheetOne 20s linear;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation-iteration-count: infinite;
+}
+
+#sheet2 {
+  animation: sheetOne 20s linear;
+  transform-origin: center;
+  transform-box: fill-box;
+  animation-iteration-count: infinite;
+}
+
+/* IDEAS ANIMATION */
+
+#spark {
+  animation: light 1s ease;
+  animation-iteration-count: infinite;
+}
+
+#light {
+  animation: light 1s ease;
+  animation-iteration-count: infinite;
+}
+
+/////////////////////////////
+////STAIRS
+
+@keyframes moveStairs {
+  0% {
+    transform: translateX(-150rem) translateY(35rem);
+  }
+
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+/////////////////////
+////Thunder
+
+@keyframes thunderLeft {
+  0% {
+    transform: translateX(-3rem) translateY(-2rem);
+  }
+
+  50% {
+    transform: translateY(0) translateX(0);
+  }
+
+  100% {
+    transform: translateX(-3rem) translateY(-2rem);
+  }
+}
+
+@keyframes thunderRight {
+  0% {
+    transform: translateX(3rem) translateY(-2rem);
+  }
+
+  50% {
+    transform: translateY(0) translateX(0);
+  }
+
+  100% {
+    transform: translateX(3rem) translateY(-2rem);
+  }
+}
+
+////////////////////////
+////Sheets
+
+@keyframes sheetOne {
+  0% {
+    transform: translateY(2rem) rotateY(0) rotateZ(0deg);
+  }
+
+  50% {
+    transform: translateY(-10rem) rotateY(300deg) rotateZ(260deg);
+  }
+
+  70% {
+    transform: translateY(-30rem) rotateY(360deg) rotateZ(260deg);
+  }
+
+  100% {
+    transform: translateY(-100rem) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
+/////////////////
+////Light bulb
+
+@keyframes light {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+//////////////////
+///LOGO ANIMATION
+@keyframes bounceTop {
+  0% {
+    -webkit-transform: translateY(-500px);
+    transform: translateY(-500px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateY(-65px);
+    transform: translateY(-65px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: translateY(-28px);
+    transform: translateY(-28px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  90% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+//////////////////////////
+////NAV LINKS ANIMATION
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+}
+
+////////////////////H1 ANIMATIOn
+//////////
+@keyframes trackingFromBottom {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(500px);
+    transform: translateZ(-700px) translateY(500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,97 @@
+#section-projects {
+  padding: 10rem 5rem;
+  min-height: 70vh;
+  background-color: $color-dark-grey;
+}
+.projects-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+
+  h2 {
+    text-align: start;
+    color: #fff;
+  }
+}
+.carousel {
+}
+
+.carousel-cell {
+  counter-increment: gallery-cell;
+  margin: 3rem 15rem;
+  width: 450px;
+  height: 450px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: all 0.7s ease;
+  transform: scale(0.7);
+  opacity: 0.3;
+  box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.7);
+}
+.carousel-cell.is-selected {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.project {
+  &__info {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    );
+  }
+
+  &__1 {
+    background-image: url(../projects/easyB.png);
+  }
+  &__2 {
+    background-image: url(../projects/fylo.png);
+  }
+  &__3 {
+    background-image: url(../projects/manage.png);
+  }
+  &__4 {
+    background-image: url(../projects/room.png);
+  }
+  &__5 {
+    background-image: url(../projects/nexter.png);
+  }
+  &__6 {
+    background-image: url(../projects/trillo.png);
+  }
+  &__7 {
+    background-image: url(../projects/omnifood.png);
+  }
+  &__8 {
+    background-image: url(../projects/natours.png);
+  }
+  &__9 {
+    background-image: url(../projects/tindog.png);
+  }
+  &__10 {
+    background-image: url(../projects/guess.png);
+  }
+  &__11 {
+    background-image: url(../projects/pig.png);
+  }
+
+  h6 {
+    font-size: 2rem;
+  }
+  &__paragraph {
+    font-weight: 400;
+    font-size: 2rem;
+  }
+}

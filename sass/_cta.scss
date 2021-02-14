@@ -1,0 +1,30 @@
+.cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__text {
+    h1 {
+      background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      );
+      padding: 2rem;
+      font-size: 4rem;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.5;
+
+      animation: trackingFromBottom 3s ease-in-out;
+    }
+  }
+
+  &__svg {
+    display: none;
+  }
+}

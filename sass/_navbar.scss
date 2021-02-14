@@ -1,0 +1,85 @@
+.header {
+  padding: 5rem 7rem;
+  position: relative;
+  background-image: linear-gradient(
+      to right,
+      rgba($color-black, 0.7),
+      rgba($color-black, 0.7)
+    ),
+    url(../images/background-2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  height: 100vh;
+}
+.header-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    a {
+      display: inline-block;
+      text-decoration: none;
+      font-family: "Indie Flower", cursive;
+      color: #fff;
+      font-size: 4rem;
+      animation: bounceTop 2s ease-in;
+      transition: transform 0.5s;
+
+      &:hover {
+        transform: skewY(-5deg);
+      }
+    }
+  }
+
+  &__nav {
+  }
+  &__list {
+    display: flex;
+    list-style: none;
+  }
+
+  &__item {
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    background-image: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0.3) 70%,
+      transparent 70%
+    );
+    background-repeat: no-repeat;
+    background-size: 0;
+    transition: all 0.7s ease;
+    &:not(:last-of-type) {
+      margin-right: 1rem;
+    }
+
+    &:hover {
+      background-size: 220%;
+    }
+
+    &:hover .navbar__link {
+      text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.9);
+    }
+  }
+
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      font-size: 1.6rem;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  }
+}

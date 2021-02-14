@@ -1,0 +1,69 @@
+$color-black: #222831;
+$color-dark-grey: #393e46;
+$color-light-blue: #00adb5;
+$color-orange: #d38e2a;
+
+$color-js: #f0db4f;
+$color-html: linear-gradient(130deg, #e44d26 0%, #e44d26 50%, #f16529 50%);
+$color-css: linear-gradient(130deg, #3c99dc 0%, #3c99dc 50%, #66d3fa 50%);
+
+//Fonts
+/* 
+font-family: "Indie Flower", cursive; // Logo font
+font-family: "Montserrat", sans-serif; // Main Font
+*/
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+
+  background-repeat: no-repeat;
+}
+
+//REUSABLE
+//REUSABLE
+//REUSABLE
+.heading2 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  &::after {
+    display: block;
+    content: "";
+    width: 35px;
+    height: 5px;
+    background-color: $color-orange;
+    margin: 3rem 0;
+  }
+}
+.paragraph {
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+
+.btn {
+  &,
+  &:visited,
+  &:link {
+    text-decoration: none;
+    color: #fff;
+    padding: 1.5rem 4rem;
+    background-color: red;
+    border-radius: 10rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+}
