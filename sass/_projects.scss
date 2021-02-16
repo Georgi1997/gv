@@ -66,11 +66,11 @@
     opacity: 0;
     transition: opacity 0.5s ease;
     height: 100%;
-    // background: linear-gradient(
-    //   to right,
-    //   rgba(0, 0, 0, 0.7),
-    //   rgba(0, 0, 0, 0.7)
-    // );
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.9)
+    );
   }
 
   &__1 {
@@ -112,6 +112,6 @@
   }
   &__paragraph {
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }

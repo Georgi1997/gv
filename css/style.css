@@ -601,7 +601,8 @@ body {
   color: #fff;
   opacity: 0;
   transition: opacity 0.5s ease;
-  height: 100%; }
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)); }
 
 .project__1 {
   background-image: url(../projects/easyB.png); }
@@ -641,7 +642,7 @@ body {
 
 .project__paragraph {
   font-weight: 400;
-  font-size: 2rem; }
+  font-size: 2.2rem; }
 
 #footer {
   padding: 7rem 5rem;
