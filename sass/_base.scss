@@ -25,6 +25,7 @@ font-family: "Montserrat", sans-serif; // Main Font
 html {
   font-size: 62.5%; // 1rem = 10px
   scroll-behavior: smooth;
+  overflow-x: hidden;
 
   @media only screen and (max-width: 900px) {
     font-size: 50%;
@@ -33,6 +34,6 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-
+  overflow-x: hidden;
   background-repeat: no-repeat;
 }

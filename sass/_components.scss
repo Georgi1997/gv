@@ -67,7 +67,11 @@
   position: absolute;
   bottom: 7rem;
   right: 5rem;
-  @media only screen and (max-width: 500px) {
+
+  @media only screen and (max-width: 1650px) {
+    bottom: 2rem;
+  }
+  @media only screen and (max-width: 650px) {
     bottom: 15rem;
   }
 }

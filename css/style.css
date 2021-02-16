@@ -11,13 +11,15 @@ font-family: "Montserrat", sans-serif; // Main Font
 
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  overflow-x: hidden; }
   @media only screen and (max-width: 900px) {
     html {
       font-size: 50%; } }
 
 body {
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
   background-repeat: no-repeat; }
 
 .logo a {
@@ -68,7 +70,10 @@ body {
   position: absolute;
   bottom: 7rem;
   right: 5rem; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 1650px) {
+    .b2t {
+      bottom: 2rem; } }
+  @media only screen and (max-width: 650px) {
     .b2t {
       bottom: 15rem; } }
 
@@ -143,6 +148,9 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   text-align: center; }
+  @media only screen and (min-width: 2560px) {
+    .projects-wrapper {
+      max-width: 2400px; } }
 
 .footer-wrapper {
   max-width: 1440px;
@@ -547,6 +555,9 @@ body {
     text-align: start;
     color: #fff; }
 
+.carousel .flickity-page-dots li {
+  background-color: #d38e2a; }
+
 @media only screen and (max-width: 500px) {
   .carousel .flickity-button {
     display: none; }
@@ -559,6 +570,7 @@ body {
   margin: 3rem 8rem;
   width: 45rem;
   height: 45rem;
+  background-color: #222831;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -589,8 +601,7 @@ body {
   color: #fff;
   opacity: 0;
   transition: opacity 0.5s ease;
-  height: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); }
+  height: 100%; }
 
 .project__1 {
   background-image: url(../projects/easyB.png); }

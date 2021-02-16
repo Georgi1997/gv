@@ -12,6 +12,9 @@
 }
 
 .carousel {
+  .flickity-page-dots li {
+    background-color: $color-orange;
+  }
   @media only screen and (max-width: 500px) {
     .flickity-button {
       display: none;
@@ -28,6 +31,7 @@
   margin: 3rem 8rem;
   width: 45rem;
   height: 45rem;
+  background-color: $color-black;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -62,11 +66,11 @@
     opacity: 0;
     transition: opacity 0.5s ease;
     height: 100%;
-    background: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
-    );
+    // background: linear-gradient(
+    //   to right,
+    //   rgba(0, 0, 0, 0.7),
+    //   rgba(0, 0, 0, 0.7)
+    // );
   }
 
   &__1 {
