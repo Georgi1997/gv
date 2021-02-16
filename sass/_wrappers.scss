@@ -1,0 +1,25 @@
+.header-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.skills-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.projects-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (max-width: 650px) {
+    flex-direction: column-reverse;
+  }
+}

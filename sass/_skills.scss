@@ -4,10 +4,6 @@
 
   min-height: 100vh;
 }
-.skills-wrapper {
-  max-width: 1440px;
-  margin: 0 auto;
-}
 
 .skills__text {
   color: #fff;
@@ -30,22 +26,43 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media only screen and (max-width: 1100px) {
+    flex-direction: column;
+  }
 }
 
 .skills__img {
-  width: 50%;
+  width: 30%;
+  display: block;
   text-align: center;
 
-  img {
-    width: 70%;
+  @media only screen and (max-width: 1100px) {
+    width: 100%;
+  }
+
+  svg {
+    margin: 0 auto;
+    width: 100%;
+    @media only screen and (max-width: 1100px) {
+      width: 70%;
+      transform: translateX(15%);
+    }
   }
 }
 
 .cards-container {
   width: 50%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 25rem));
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   align-items: center;
   justify-content: center;
   gap: 10rem;
+
+  @media only screen and (max-width: 1100px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 650px) {
+    width: 50%;
+  }
 }

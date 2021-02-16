@@ -1,3 +1,7 @@
+//Initialize WOW on scroll anim
+new WOW().init();
+//ANIMATE NAVBAR ITEMS
+
 const navLinks = document.querySelectorAll(".navbar__item");
 
 const animateNavItem = function () {
@@ -12,22 +16,8 @@ animateNavItem();
 
 const hiddenCard = document.querySelectorAll(".project__info");
 
-// const hoverAction = function () {
-//   for (const x of hiddenCard) {
-//     x.addEventListener("mouseover", function () {
-//       x.style.opacity = 1;
-//     });
-//   }
-//   for (const y of hiddenCard) {
-//     y.addEventListener("mouseout", function () {
-//       y.style.opacity = 0;
-//     });
-//   }
-// };
-// hoverAction();
-
 const hoverAction = function () {
-  hiddenCard.forEach(function (link, index) {
+  hiddenCard.forEach(function (link, i) {
     link.addEventListener("mouseover", function () {
       link.style.opacity = 1;
     });
@@ -38,3 +28,32 @@ const hoverAction = function () {
 };
 
 hoverAction();
+
+//B2TOP BTN
+
+const b2t = document.querySelector(".b2t");
+
+b2t.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+////Sticky navbar
+const nav = document.querySelector(".navbar");
+
+window.addEventListener("scroll", () => {
+  nav.classList.toggle("sticky", window.scrollY > 5);
+});
+
+//Responsive navbar
+//Responsive navbar
+
+const navList = document.querySelector(".navbar__list");
+const menuBtn = document.querySelector(".burger");
+
+menuBtn.addEventListener("click", () => {
+  navList.classList.toggle("nav-active");
+  menuBtn.classList.toggle("triggerAnim");
+});

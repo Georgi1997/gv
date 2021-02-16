@@ -3,9 +3,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
   &__text {
     h1 {
@@ -21,10 +18,9 @@
       line-height: 1.5;
 
       animation: trackingFromBottom 3s ease-in-out;
+      @media only screen and (max-width: 1050px) {
+        font-size: 3.5rem;
+      }
     }
-  }
-
-  &__svg {
-    display: none;
   }
 }

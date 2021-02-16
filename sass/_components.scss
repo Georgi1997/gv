@@ -1,0 +1,152 @@
+//REUSABLE
+//REUSABLE
+//REUSABLE
+.logo {
+  a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Indie Flower", cursive;
+    color: #fff;
+    font-size: 4rem;
+    animation: bounceTop 2s ease-in;
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: skewY(-5deg);
+    }
+  }
+}
+
+.heading2 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  &::after {
+    display: block;
+    content: "";
+    width: 35px;
+    height: 5px;
+    background-color: $color-orange;
+    margin: 3rem 0;
+  }
+}
+.paragraph {
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+
+.btn {
+  &,
+  &:visited,
+  &:link {
+    text-decoration: none;
+    color: #fff;
+    padding: 1.5rem 4rem;
+    background-color: $color-orange;
+    border-radius: 5px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: transform 0.5s ease;
+
+    &:hover {
+      transform: translateY(-1rem);
+    }
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+// b2t button
+
+.b2t {
+  cursor: pointer;
+  font-size: 3rem;
+  color: $color-orange;
+  position: absolute;
+  bottom: 7rem;
+  right: 5rem;
+  @media only screen and (max-width: 500px) {
+    bottom: 15rem;
+  }
+}
+
+//sticky navbar
+.navbar.sticky {
+  background-color: $color-dark-grey;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  padding: 2rem 6rem;
+  width: 100%;
+  transition: all 0.6s ease;
+}
+
+//burger responsive nav
+.burger {
+  cursor: pointer;
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+  transition: all 0.5s ease;
+}
+
+.triggerAnim .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.triggerAnim .line2 {
+  opacity: 0;
+}
+.triggerAnim .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+//active class for navbar
+.nav-active {
+  transform: translateY(0) !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar__list {
+    position: absolute;
+    height: 10vh;
+    width: 100vw;
+    top: 8vh;
+    right: 0;
+    background-color: $color-dark-grey;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateY(-150%);
+    transition: transform 0.5s ease;
+  }
+
+  .navbar__item {
+    padding: 1rem 2rem;
+  }
+
+  .navbar {
+    background-color: $color-dark-grey;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navbar__list {
+    flex-direction: column;
+    transform: translateY(-200%);
+    height: 25vh;
+    top: 8vh;
+  }
+  .navbar {
+  }
+}

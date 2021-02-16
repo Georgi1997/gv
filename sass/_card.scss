@@ -2,8 +2,7 @@
   perspective: 1500px;
   -moz-perspective: 1500px;
   position: relative;
-  height: 25rem;
-
+  height: 30rem;
   &__list {
     padding: 1rem;
 
@@ -15,6 +14,9 @@
   }
 
   &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     color: #fff;
     font-size: 1.5rem;
     font-weight: 500;
