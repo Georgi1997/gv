@@ -602,7 +602,7 @@ body {
   opacity: 0;
   transition: opacity 0.5s ease;
   height: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)); }
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); }
 
 .project__1 {
   background-image: url(../projects/easyB.png); }
@@ -636,6 +636,12 @@ body {
 
 .project__11 {
   background-image: url(../projects/pig.png); }
+
+.project__12 {
+  background-image: url(../projects/myteam.png); }
+
+.project__13 {
+  background-image: url(../projects/photosnap.png); }
 
 .project h6 {
   font-size: 2rem; }
