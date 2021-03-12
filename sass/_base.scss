@@ -24,7 +24,7 @@ font-family: "Montserrat", sans-serif; // Main Font
 
 html {
   font-size: 62.5%; // 1rem = 10px
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth; TEST NEW JS
   overflow-x: hidden;
 
   @media only screen and (max-width: 900px) {

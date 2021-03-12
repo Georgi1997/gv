@@ -1,20 +1,26 @@
 //Initialize WOW on scroll anim
 new WOW().init();
+
+// variables
+const navList = document.querySelector(".navbar__list");
+const navItems = document.querySelectorAll(".navbar__item");
+const hiddenCard = document.querySelectorAll(".project__info");
+const b2t = document.querySelector(".b2t");
+const tops = document.querySelector("#header--top");
+const header = document.querySelector(".header");
+const nav = document.querySelector(".navbar");
+const menuBtn = document.querySelector(".burger");
 //ANIMATE NAVBAR ITEMS
 
-const navLinks = document.querySelectorAll(".navbar__item");
-
 const animateNavItem = function () {
-  navLinks.forEach(function (link, index) {
-    link.style.animation = `shake 1s linear ${index / 4 + 1.3}s`;
+  navItems.forEach(function (link, index) {
+    link.style.animation = `shake 1s linear  ${index / 4 + 1.3}s`;
   });
 };
 
 animateNavItem();
 
 //ANIMATE Carousel
-
-const hiddenCard = document.querySelectorAll(".project__info");
 
 const hoverAction = function () {
   hiddenCard.forEach(function (link, i) {
@@ -31,27 +37,45 @@ hoverAction();
 
 //B2TOP BTN
 
-const b2t = document.querySelector(".b2t");
-
 b2t.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
+  tops.scrollIntoView({
     behavior: "smooth",
   });
 });
 
-////Sticky navbar
-const nav = document.querySelector(".navbar");
+//Nav item scroll to
+navList.addEventListener("click", function (e) {
+  e.preventDefault();
 
-window.addEventListener("scroll", () => {
-  nav.classList.toggle("sticky", window.scrollY > 5);
+  if (e.target.classList.contains("navbar__link")) {
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({
+      behavior: "smooth",
+    });
+  }
 });
 
-//Responsive navbar
-//Responsive navbar
+////Sticky navbar
 
-const navList = document.querySelector(".navbar__list");
-const menuBtn = document.querySelector(".burger");
+const stickyNav = function (entries) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) {
+    nav.classList.add("sticky");
+  } else {
+    nav.classList.remove("sticky");
+  }
+};
+
+const headerObserver = new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0.7,
+});
+
+headerObserver.observe(header);
+
+//Responsive navbar
+//Responsive navbar
 
 menuBtn.addEventListener("click", () => {
   navList.classList.toggle("nav-active");
